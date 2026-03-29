@@ -3,6 +3,13 @@ import { eq } from 'drizzle-orm';
 import { db, pool } from './db/db.js';
 import { demoUsers } from './db/schema.js';
 
+/**
+ * The main entry point of the application that performs CRUD operations
+ * on the demoUsers table to demonstrate database connectivity and basic functionality.
+ *
+ * @returns {Promise<void>} A promise that resolves when all CRUD operations are completed.
+ * @throws {Error} Throws an error if any database operation fails.
+ */
 async function main() {
   try {
     console.log('Performing CRUD operations...');
