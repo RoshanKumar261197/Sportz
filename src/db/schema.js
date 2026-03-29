@@ -17,6 +17,14 @@ export const matches = pgTable('matches', {
   createdAt: timestamp('created_at').notNull().defaultNow(),
 });
 
+// Create a demo_users table
+export const demoUsers = pgTable('demo_users', {
+  id: serial('id').primaryKey(),
+  name: text('name').notNull(),
+  email: text('email').notNull(),
+  createdAt: timestamp('created_at').notNull().defaultNow(),
+});
+
 // Create a commentary table
 export const commentary = pgTable('commentary', {
   id: serial('id').primaryKey(),

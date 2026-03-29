@@ -4,10 +4,11 @@ import { db, pool } from './db/db.js';
 import { demoUsers } from './db/schema.js';
 
 /**
- * Executes a create-read-update-delete sequence against the `demoUsers` table and closes the DB pool.
+ * Performs a sequence of CREATE, READ, UPDATE, and DELETE operations against the demoUsers table and ensures the database pool is closed.
  *
- * Inserts a new user, selects it, updates its name, deletes it, and then ends the database pool if present.
- * On error, logs the error and terminates the process with exit code 1.
+ * This function logs each operation's outcome, exits the process with code 1 if an error occurs, and closes the DB pool in all cases when available.
+ *
+ * @throws {Error} If a created or updated row is not returned (e.g., insertion or update failed).
  */
 async function main() {
   try {
