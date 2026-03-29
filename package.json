@@ -1,0 +1,32 @@
+{
+  "name": "sportz",
+  "version": "1.0.0",
+  "description": "WebSocket App",
+  "keywords": [
+    "websocket",
+    "socket",
+    "sportz",
+    "sports",
+    "sport"
+  ],
+  "homepage": "https://github.com/RoshanKumar261197/Sportz#readme",
+  "bugs": {
+    "url": "https://github.com/RoshanKumar261197/Sportz/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RoshanKumar261197/Sportz.git"
+  },
+  "license": "MIT",
+  "author": "Roshan Kumar",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "ws": "^8.20.0"
+  }
+}
