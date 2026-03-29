@@ -4,11 +4,11 @@ import { db, pool } from './db/db.js';
 import { demoUsers } from './db/schema.js';
 
 /**
- * The main entry point of the application that performs CRUD operations
- * on the demoUsers table to demonstrate database connectivity and basic functionality.
+ * Performs a sequence of CREATE, READ, UPDATE, and DELETE operations against the demoUsers table and ensures the database pool is closed.
  *
- * @returns {Promise<void>} A promise that resolves when all CRUD operations are completed.
- * @throws {Error} Throws an error if any database operation fails.
+ * This function logs each operation's outcome, exits the process with code 1 if an error occurs, and closes the DB pool in all cases when available.
+ *
+ * @throws {Error} If a created or updated row is not returned (e.g., insertion or update failed).
  */
 async function main() {
   try {
