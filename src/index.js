@@ -3,6 +3,12 @@ import { eq } from 'drizzle-orm';
 import { db, pool } from './db/db.js';
 import { demoUsers } from './db/schema.js';
 
+/**
+ * Executes a create-read-update-delete sequence against the `demoUsers` table and closes the DB pool.
+ *
+ * Inserts a new user, selects it, updates its name, deletes it, and then ends the database pool if present.
+ * On error, logs the error and terminates the process with exit code 1.
+ */
 async function main() {
   try {
     console.log('Performing CRUD operations...');
